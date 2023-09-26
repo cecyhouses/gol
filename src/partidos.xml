@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resultados [
+        <!ELEMENT resultados (fecha|partidos)*>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT partidos (partido)*>
+        <!ELEMENT partido (equipos|marcador|goles)*>
+        <!ELEMENT equipos (eq1|eq2)*>
+        <!ELEMENT eq1 (#PCDATA)>
+        <!ELEMENT eq2 (#PCDATA)>
+        <!ELEMENT marcador (#PCDATA)>
+        <!ELEMENT goles (gol)*>
+        <!ELEMENT gol (jugador)*>
+        <!ELEMENT jugador (#PCDATA)>
+        <!ATTLIST jugador
+                equipo CDATA #REQUIRED
+                minuto CDATA #REQUIRED
+                nombre CDATA #REQUIRED>
+        ]>
+<resultados>
+    <fecha>2023-09-20</fecha>
+    <partidos>
+        <partido>
+            <equipos>
+                <eq1>Queretaro</eq1>
+                <eq2>America</eq2>
+            </equipos>
+            <marcador>1-2</marcador>
+            <goles>
+                <gol>
+                    <jugador nombre="Jose Raul Murillo" equipo="Queretaro" minuto="10" />
+                </gol>
+                <gol>
+                    <jugador nombre="Diego Valdes" equipo="America" minuto="51"/>
+                </gol>
+                <gol>
+                    <jugador nombre="Igor Lichnovsky" equipo="America" minuto="77" />
+                </gol>
+            </goles>
+        </partido>
+    </partidos>
+</resultados>
